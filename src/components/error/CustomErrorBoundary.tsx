@@ -2,6 +2,7 @@ import React, { Component, ErrorInfo, ReactNode } from "react";
 
 interface ErrorProps {
   children: ReactNode;
+  fallback?: ReactNode;
 }
 
 interface State {
@@ -25,7 +26,7 @@ class CustomErrorBoundary extends Component<ErrorProps, State> {
 
   public render(): React.ReactNode {
     if (this.state.hasError) {
-      return <h1>Sorry.. there was an error</h1>;
+      return this.props.fallback? this.props.fallback: (<h1>Sorry, there is an error</h1>)
     }
     return this.props.children;
   }

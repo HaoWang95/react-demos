@@ -34,6 +34,7 @@ let Layout = ({ children }: LayoutProps) => {
   }, [themeState])
 
   return (
+    
     <ThemeProvider theme={theme}>
       <Header themeToggleHandler={themeToggleHandler}/>
       {children}

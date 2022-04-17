@@ -1,10 +1,12 @@
-import * as React from "react";
-import { ErrorBoundary } from "react-error-boundary";
+import { Typography } from "@mui/material";
+import Layout from "../layout/Layout.component";
 
-let ErrorHandler = ({ children }: { children: React.ReactNode }) => {
+let ErrorFallBack = () => {
   return (
-    <div></div>
+    <Layout>
+      <Typography>An error just occurred...</Typography>
+    </Layout>
   );
 };
 
-export default ErrorHandler;
+export default ErrorFallBack;
