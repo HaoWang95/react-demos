@@ -19,7 +19,8 @@ let Layout = ({ children }: LayoutProps) => {
     () => createTheme({
       ...preTheme,
       palette: {
-        mode: themeState as PaletteMode
+        mode: themeState as PaletteMode,
+        primary: preTheme.palette.primary,
       }
     }), [themeState]
   )
