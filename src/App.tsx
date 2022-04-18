@@ -14,7 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<IndexPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="*" element={<Layout>Not Found</Layout>}/>
+          {/* Create a not found 404 page */}
+          <Route path="*" element={<Layout>Not Found</Layout>} />
         </Routes>
       </BrowserRouter>
     </ErrorBoundary>
